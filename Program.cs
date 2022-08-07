@@ -28,7 +28,7 @@ string[] arr = CreatingArray(n);
 System.Console.WriteLine("Созданный масив:");
 PrintArray(arr);
 System.Console.WriteLine();
-string [] Sortarray(string[] arr, int m)
+string [] FormingArray(string[] arr, int m)
 {
     int count = 0;
     for (int i = 0; i < arr.Length; i++)
@@ -52,6 +52,6 @@ return arraysort;
 }
 System.Console.WriteLine("Введите максимальную длину элементов массива, которые необходимо вывести");
 int m = Int32.Parse(System.Console.ReadLine());
-string[] arr2 = Sortarray(arr,m);
+string[] arr2 = FormingArray(arr,m);
 System.Console.WriteLine($"Новый массив:");
 PrintArray(arr2);
