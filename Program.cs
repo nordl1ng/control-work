@@ -24,16 +24,16 @@ void PrintArray(string[] array)
 {
     Console.Write(String.Join(", ", array));
 }
-
 string[] arr = CreatingArray(n);
+System.Console.WriteLine("Созданный масив:");
 PrintArray(arr);
-
-string [] Sortarray(string[] arr)
+System.Console.WriteLine();
+string [] Sortarray(string[] arr, int m)
 {
     int count = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i].Length <= 3)
+        if (arr[i].Length <= m)
         {
             count++;
         }
@@ -42,7 +42,7 @@ string [] Sortarray(string[] arr)
     int j = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i].Length <= 3)
+        if (arr[i].Length <= m)
         {
             arraysort[j] = arr[i];
             j++;
@@ -50,7 +50,8 @@ string [] Sortarray(string[] arr)
     }
 return arraysort;
 }
-System.Console.WriteLine();
-
-string[] arr2 = Sortarray(arr);
+System.Console.WriteLine("Введите максимальную длину элементов массива, которые необходимо вывести");
+int m = Int32.Parse(System.Console.ReadLine());
+string[] arr2 = Sortarray(arr,m);
+System.Console.WriteLine($"Новый массив:");
 PrintArray(arr2);
