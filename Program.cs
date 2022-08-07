@@ -13,6 +13,7 @@ string [] CreatingArray (int n)
 string [] array = new string [n];
 for (int i = 0; i < n; i++)
 {
+    System.Console.WriteLine($"Введите элемент массива {i+1}");
     array [i] = System.Console.ReadLine();
 }
 return array;
@@ -20,10 +21,7 @@ return array;
 
 void PrintArray (string [] array)
 {
-    for (int i = 0; i < array.Length; i++)
-    {
-        System.Console.Write($"{array[i]} ");
-    }
+    Console.Write(String.Join(", ", array));
 }
 
 string [] arr = CreatingArray (n);
