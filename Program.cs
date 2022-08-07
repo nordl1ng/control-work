@@ -33,7 +33,7 @@ string [] Sortarray(string[] arr)
     int count = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i].Length < 3)
+        if (arr[i].Length <= 3)
         {
             count++;
         }
@@ -42,7 +42,7 @@ string [] Sortarray(string[] arr)
     int j = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i].Length < 3)
+        if (arr[i].Length <= 3)
         {
             arraysort[j] = arr[i];
             j++;
