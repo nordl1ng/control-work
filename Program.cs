@@ -5,24 +5,50 @@
 ["hello", "2", "world", ":-)"] -> ["2", ":-)"]
 ["1234", "1567", "-2", "computer science"] -> ["-2"]
 ["Russia", "Denmark", "Kazan"] -> [] */
+
 System.Console.WriteLine("Введите количество элементов массива");
 int n = Int32.Parse(System.Console.ReadLine());
 
-string [] CreatingArray (int n)
+string[] CreatingArray(int n)
 {
-string [] array = new string [n];
-for (int i = 0; i < n; i++)
-{
-    System.Console.WriteLine($"Введите элемент массива {i+1}");
-    array [i] = System.Console.ReadLine();
-}
-return array;
+    string[] array = new string[n];
+    for (int i = 0; i < n; i++)
+    {
+        System.Console.WriteLine($"Введите элемент массива {i + 1}");
+        array[i] = System.Console.ReadLine();
+    }
+    return array;
 }
 
-void PrintArray (string [] array)
+void PrintArray(string[] array)
 {
     Console.Write(String.Join(", ", array));
 }
 
-string [] arr = CreatingArray (n);
-PrintArray (arr);
+string[] arr = CreatingArray(n);
+PrintArray(arr);
+
+void Sortarray(string[] arr)
+{
+    int count = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length < 3)
+        {
+            count++;
+        }
+    }
+    string[] arraysort = new string[count];
+    int j = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length < 3)
+        {
+            arraysort[j] = arr[i];
+            j++;
+        }
+    }
+}
+System.Console.WriteLine();
+Sortarray(arr);
+PrintArray(arr);
