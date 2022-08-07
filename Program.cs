@@ -28,7 +28,7 @@ void PrintArray(string[] array)
 string[] arr = CreatingArray(n);
 PrintArray(arr);
 
-void Sortarray(string[] arr)
+string [] Sortarray(string[] arr)
 {
     int count = 0;
     for (int i = 0; i < arr.Length; i++)
@@ -48,7 +48,9 @@ void Sortarray(string[] arr)
             j++;
         }
     }
+return arraysort;
 }
 System.Console.WriteLine();
-Sortarray(arr);
-PrintArray(arr);
+
+string[] arr2 = Sortarray(arr);
+PrintArray(arr2);
