@@ -8,22 +8,23 @@
 System.Console.WriteLine("Введите количество элементов массива");
 int n = Int32.Parse(System.Console.ReadLine());
 
-// void CreatingArray (int n)
-// {
+string [] CreatingArray (int n)
+{
 string [] array = new string [n];
 for (int i = 0; i < n; i++)
 {
     array [i] = System.Console.ReadLine();
 }
-// }
+return array;
+}
 
-// void PrintArray (string [] array)
-// {
+void PrintArray (string [] array)
+{
     for (int i = 0; i < array.Length; i++)
     {
         System.Console.Write($"{array[i]} ");
     }
-// }
+}
 
-// string arr[] = CreatingArray (n);
-// PrintArray (arr);
+string [] arr = CreatingArray (n);
+PrintArray (arr);
